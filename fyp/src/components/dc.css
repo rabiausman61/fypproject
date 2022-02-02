@@ -1,0 +1,181 @@
+.container{
+  width: 100%;
+  height:60vh;
+  position: relative;
+  overflow: hidden;
+
+
+}
+.container img{
+  width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+.consult-section{
+margin-top: 50px;
+width: 100%;
+height: 250px;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.left-section{
+  flex:1;
+  background-color: rgb(124, 116, 116);
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  margin-right: 70px;
+  margin-left: 70px;
+
+
+
+}
+.right-section{
+  height: 100%;
+  width: 100%;
+  margin-right: 30px;
+  flex:1;
+  opacity: 0.7;
+  background-color: rgb(245, 217, 222);
+  
+
+}
+.consult{
+  height:160px;
+  width: 93%;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-left: 20px;
+  
+  
+}
+
+.imggg{
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.c{
+
+float: right;
+
+}
+.how-works
+{
+  margin-top: 20px;
+  height:250px;
+  width: 100%;
+  display: flex;
+}
+.how-w{
+  margin-top: 20px;
+  height:250px;
+  width: 100%;
+  display: flex;
+}
+.left-works{
+flex:1;
+}
+.right-works{
+  flex:1;
+}
+.left-w{
+  flex:1;
+ 
+}
+.right-w{
+  flex:1;
+  
+}
+.l-w{
+    margin-top: 50px;
+    margin-left:90px;
+  border-radius: 50%;
+  height:70%;
+  
+  
+
+}
+.i{
+  border-radius: 50%;
+  height:70%;
+  margin-top: 50px;
+  margin-left:250px;
+}
+.c{
+  margin-top: 100px;
+  margin-right:290px
+}
+.choose{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.left-appointment{
+  height: 120%;
+  width:200%;
+
+  flex:1;
+  display: flex;
+  background-color: rgb(219, 219, 219);
+  margin-left: 80px;
+  margin-right: 150px;
+ 
+}
+.right-appointment{
+
+  flex:1;
+  height: 120%;
+  width: 50%;
+ display: flex;
+  background-color: rgb(219, 219, 219);
+
+  background-color: rgb(245, 217, 222);
+  
+}
+.setting-appointment{
+  height:160px;
+  width: 93%;
+  object-fit: cover;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+}
+.l-a{
+border-radius: 50%;
+height:100px;
+margin-top: 20px;
+margin-left:30px;
+
+}
+
+
+.doctor-name{
+  margin-top:20px;
+  margin-left: 20px;
+  height: 100px;
+ 
+
+}
+.working{
+  margin-top: 50px;
+  text-align: center;
+}
+.appoint-doctor{
+  margin-top: 20px;
+  margin-left: 100px;
+}
+.rabia{
+  flex:1;
+  background-color: black;
+  width:30%
+}
+.doctor-n{
+ 
+  margin-left: 150px;
+  height: 100px;
+  background-color: red;
+  flex:1,
+ 
+}

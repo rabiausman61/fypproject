@@ -1,0 +1,42 @@
+.searchbar{
+    background-color: #5151da;   
+    height: 80px;
+     width: auto;
+   
+    margin: 0px auto; 
+    
+}
+h1{
+    margin-left: 6px;
+    color:white;
+    display: inline;
+    
+    
+}
+
+img{ 
+    float: right;
+    height: 30px;
+    width: 30px;
+   
+
+   
+    line-height: 45px;
+  
+    font-size: 60px;
+    
+    
+}
+
+.visually-hidden{
+   padding-left: 500px;
+   display: inline-block;
+
+    
+}
+#header-search
+{
+    display: inline-block;
+  vertical-align: middle;
+  
+}
