@@ -10,6 +10,12 @@ app.use(express.json())
 app.use('/api/auth',require ('./routes/auth'))
 app.use('/api/adminauth',require ('./routes/adminauth'))
 
+app.use('/api/category',require ('./routes/category'))
+
+app.use('/api/product',require ('./routes/product'))
+
+app.use('/api/cart',require ('./routes/cart'))
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

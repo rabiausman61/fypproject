@@ -15,10 +15,7 @@ const AdminSchema = new Schema({
      type:String,
     required:true
  },
- phonenumber:{
-    type:Number,
-    required:true,
- },
+
  
 });
 const Admin=mongoose.model('admin',AdminSchema);

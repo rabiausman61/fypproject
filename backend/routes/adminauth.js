@@ -3,15 +3,15 @@ const Admin=require('../models/Admin');
 const router=express.Router();
 const { body, check, validationResult } = require('express-validator');
 const bcrypt= require('bcryptjs');
-var jwt= require('jsonwebtoken')
+var jwt= require('jsonwebtoken');
+const fetchuser = require('../middleware/fetchuser');
 
 const JWT_SECRET= 'rabia'
 //creating Admin 
-router.post('/admin/signin',[
+router.post('/admin/signup',[
     body('email','Enter valid email').isEmail(),
     body("password",'password length must be 5 characters long').isLength({min:5}),
     body("confirmpassword").isLength({min:5}),
-    body("phonenumber",'enter a valid phone number').isLength({min:11}),
     check('confirmpassword').custom((value, { req }) => {
         if (value !== req.body.password) {
               throw new Error('Password Confirmation does not match password');
@@ -26,9 +26,9 @@ router.post('/admin/signin',[
       return res.status(400).json({ errors: errors.array() });
     }
 try{
-    let Admin= await Admin.findOne({ email:req.body.email});
+    let admin= await Admin.findOne({ email:req.body.email});
     
-    if(Admin){
+    if(admin){
         return res.status(400).json({success,error:"Admin with email already exists"})
     }
 const salt= await bcrypt.genSalt(10);
@@ -41,7 +41,6 @@ admin = await Admin.create({
         email: req.body.email,
         password: secPass,
         confirmpassword: sec2Pass,
-        phonenumber: req.body.phonenumber,
       });
       const data={
           admin:{
@@ -61,7 +60,7 @@ res.status(500).send("some error occured");
 )
 
 //authenticateaAdmin
-router.post('/admin/signup',[
+router.post('/admin/signin',[
     body('email','Enter valid email').isEmail(),
     body("password","password cannot be blank").exists(),
 ], async (req,res)=>{
@@ -92,9 +91,12 @@ const data={
         id:admin.id
     }
 }
+
 const authToken=jwt.sign(data,JWT_SECRET);
 success=true
 res.json({success,authToken})
+console.log(admin);
+
     }
 
 
@@ -109,7 +111,7 @@ res.json({success,authToken})
 
 
 ///Admin details
-/*router.post('/getadmin' ,fetchAdmin, async(req,res)=>{
+router.post('/getadmin' ,fetchuser, async(req,res)=>{
    
 
 try{
@@ -123,6 +125,6 @@ catch(error){
     console.log(error.message);
         res.status(500).send(" Internal server error occured");
 } 
-})*/
+})
 
 module.exports=router
