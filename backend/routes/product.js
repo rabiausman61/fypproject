@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
       cb(null, shortid.generate()+ '-'+ file)
     }
   })
-  
+
   const upload=multer({storage});
 
 router.post('/create', signinadmin,fetchuser, upload.array('productPicture'), (req,res)=>{
