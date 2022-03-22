@@ -2,3 +2,21 @@ h1{
     text-align: center;
     margin-top: 200px;
 }
+.welcome{
+
+    margin-top: 200px;
+    text-align: center;
+}
+.handler{
+    flex-direction: row;
+    flex:1
+}
+.adminlayout{
+    background-color: blue;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.a{
+    
+    color: black;
+}

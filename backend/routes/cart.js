@@ -12,13 +12,16 @@ router.post("/createitems", userlogin, middleware, (req, res) => {
       const productexists = cart.items.find(
         (c) => c.productId == req.body.items.productId
       );
-
+// if item exists capture item and then increase the quantity
       if (productexists) {
         Cart.findOneAndUpdate(
-          { user: req.user.id,"items.productId": },
+          { 'user': req.user.id,"items.productId": req.body.items.productId},
           {
-            $push: {
-              items: req.body.items,
+            $set: {
+              "items.$": {
+                ...req.body.items,
+                quantity: productexists.quantity+req.body.items.quantity,
+              }
             },
           }
         ).exec((error, c) => {
@@ -31,7 +34,7 @@ router.post("/createitems", userlogin, middleware, (req, res) => {
           { user: req.user.id },
           {
             $push: {
-              items: req.body.items,
+              items: req.body.items
             },
           }
         ).exec((error, c) => {

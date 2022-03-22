@@ -9,11 +9,10 @@ const Topmenu = () => {
 <div class='topmenu'>
             <ul>
 <li> 
-   <Link to="/" className='a'>Home</Link>
+   <Link to="/signin" className='a'>Signin</Link>
 </li>
 
-<li> <Link to="/signin" className='a'>Sign In</Link>
-</li>
+
 
 
 

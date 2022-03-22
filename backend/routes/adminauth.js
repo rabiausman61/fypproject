@@ -88,13 +88,14 @@ if(!passwordCompare){
 
 const data={
     admin:{
-        id:admin.id
+        id:admin.id,
     }
 }
 
 const authToken=jwt.sign(data,JWT_SECRET);
 success=true
-res.json({success,authToken})
+res.json({success,authToken,admin})
+
 console.log(admin);
 
     }

@@ -1,13 +1,40 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import './Home.css'
+import './Home.css';
+import {
+  CDBSidebar,
+  CDBSidebarContent,
+  CDBSidebarFooter,
+  CDBSidebarHeader,
+  CDBSidebarMenu,
+  CDBSidebarMenuItem,
+} from 'cdbreact';
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Home = () => {
-  return <div>
-    <Jumbotron>
+return(
+   <>
+  <div className='adminlayout'>
+  <ul>
+  <li> 
+     <Link to="/seemedicines" className='a'>Add Categories</Link>
+  </li>
 
-        <h1> Welcome to Admin Dashboard</h1>
-    </Jumbotron>
-  </div>;
+  <li> 
+     <Link to="/addproducts" className='a'>Add Products</Link>
+  </li>
+  
+  
+  
+  
+  
+              </ul>
+
+          </div>
+        
+         
+          </>
+)
 };
 
 export default Home;
